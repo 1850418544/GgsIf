@@ -1,0 +1,3 @@
+2026-05-19 15:00:46 | INFO     | utils.http_client:request:94 - 发送请求: GET https://pehss.sfrtlce.cn/service-boss/home/orderStatistics/byRange
+2026-05-19 15:00:46 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 57.07ms
+2026-05-19 15:00:46 | INFO     | conftest:pytest_runtest_makereport:87 - ✓ 测试通过: 订单统计(全范围)

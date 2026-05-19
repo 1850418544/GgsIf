@@ -1,0 +1,3 @@
+2026-05-19 14:49:59 | INFO     | utils.http_client:request:94 - 发送请求: GET https://pehss.sfrtlce.cn/service-boss/home/orderProductCountStatistics
+2026-05-19 14:49:59 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 62.88ms
+2026-05-19 14:49:59 | INFO     | conftest:pytest_runtest_makereport:87 - ✓ 测试通过: 订单产品数量统计

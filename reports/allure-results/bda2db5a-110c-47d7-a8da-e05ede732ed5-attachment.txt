@@ -1,0 +1,4 @@
+2026-05-19 14:49:58 | INFO     | utils.http_client:request:94 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-19 14:49:58 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 28.49ms
+2026-05-19 14:49:58 | INFO     | testcases.test_auth_login:test_login_wrong_password:88 - 错误密码响应状态码: 200
+2026-05-19 14:49:58 | INFO     | conftest:pytest_runtest_makereport:87 - ✓ 测试通过: 错误密码登录

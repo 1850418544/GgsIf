@@ -1,0 +1,4 @@
+2026-05-19 15:00:43 | INFO     | utils.http_client:request:94 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-19 15:00:45 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 1719.78ms
+2026-05-19 15:00:45 | INFO     | testcases.test_auth_login:test_login_success:45 - 登录成功响应: {"code":"200","requestId":"8480e57e-1333-44bc-b8e5-d0ce46d1daca","message":"处理成功","timestamp":"1779174046689","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI3NGFhNjg5YTBlMTI0YjE5YmI0M2Y4MjJmZTZkMTRjOSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxNzQwNDYsImV4cCI6MTc4MTc2NjA0Nn0.oKCVYnQdZv_jPqfZmRm1vlF_RYbthzgrvPy4BWlOeRY","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-19 15:00:45 | INFO     | conftest:pytest_runtest_makereport:87 - ✓ 测试通过: 登录成功

@@ -1,0 +1,189 @@
+================================================================================
+                                   接口自动化测试报告                                    
+================================================================================
+
+测试时间: 2026-05-19 15:00:56
+
+--------------------------------------------------------------------------------
+测试汇总
+--------------------------------------------------------------------------------
+总接口数: 13
+通过接口: 13
+失败接口: 0
+通过率: 100.00%
+
+
+================================================================================
+详细测试结果
+================================================================================
+
+【1】登录成功
+  用例编号: 001
+  测试模块: 登录模块
+  接口URL: /service/boss/sysuser/authLogin
+  请求方法: POST
+  请求参数: {'username': 'fan', 'password': 'fan123'}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"200","requestId":"8480e57e-1333-44bc-b8e5-d0ce46d1daca","message":"处理成功","timestamp":"1779174046689","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI3NGFhNjg5YTBlMTI0
+  响应时间: 1719.78 ms
+  测试时间: 2026-05-19 15:00:43
+  测试结果: PASS
+
+【2】错误密码登录
+  用例编号: 002
+  测试模块: 登录模块
+  接口URL: /service/boss/sysuser/authLogin
+  请求方法: POST
+  请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"2002","requestId":"36520d5f-7082-453c-a666-931227480073","message":"账号不存在或密码错误！","timestamp":"1779174046879"}
+  响应时间: 57.74 ms
+  测试时间: 2026-05-19 15:00:45
+  测试结果: PASS
+
+【3】空用户名登录
+  用例编号: 003
+  测试模块: 登录模块
+  接口URL: /service/boss/sysuser/authLogin
+  请求方法: POST
+  请求参数: {'username': '', 'password': 'fan123'}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"2002","requestId":"f2da5468-02aa-43ff-b7c4-bac25d6bca63","message":"账户不存在！","timestamp":"1779174046946"}
+  响应时间: 36.98 ms
+  测试时间: 2026-05-19 15:00:45
+  测试结果: PASS
+
+【4】空密码登录
+  用例编号: 004
+  测试模块: 登录模块
+  接口URL: /service/boss/sysuser/authLogin
+  请求方法: POST
+  请求参数: {'username': 'fan', 'password': ''}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"2002","requestId":"d7108753-bb26-443f-8ea9-6f17aef64658","message":"账号不存在或密码错误！","timestamp":"1779174047008"}
+  响应时间: 41.83 ms
+  测试时间: 2026-05-19 15:00:45
+  测试结果: PASS
+
+【5】缺少参数登录
+  用例编号: 005
+  测试模块: 登录模块
+  接口URL: /service/boss/sysuser/authLogin
+  请求方法: POST
+  请求参数: {'username': 'fan'}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"500","requestId":"84f0493d-b4f7-46cf-884d-1bfe6062c7a2","message":"服务错误","timestamp":"1779174047095","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserCli
+  响应时间: 62.00 ms
+  测试时间: 2026-05-19 15:00:45
+  测试结果: PASS
+
+【6】首页统计接口
+  用例编号: 007
+  测试模块: 首页模块
+  接口URL: /home/statistics
+  请求方法: GET
+  请求参数: {}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"200","requestId":"fc97e538-66fa-4f85-a3cb-ab7c9ae565b8","message":"处理成功","timestamp":"1779174047611","data":{"orderStatistics":null,"productSalesStatistics":{"todayStatistic":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260519},"yesterdayStatistic":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260518},"currentMonthStatistic":{"totalSalesVolume":"55","totalSalesAmount":"1526367","beginDate":20260501,"endDate":20260519}},"memberTotalCount":"513","userTotalCount":"620","todayNewMembershipCount":"0","todaySalesStatistics":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260519},"yesterdaySalesStatistics":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260518},"currentMonthSalesStatistics":{"totalSalesVolume":"55","totalSalesAmount":"1526367","beginDate":20260501,"endDate":20260519}}}
+  响应时间: 290.20 ms
+  测试时间: 2026-05-19 15:00:45
+  测试结果: PASS
+
+【7】订单产品数量统计
+  用例编号: 008
+  测试模块: 首页模块
+  接口URL: /home/orderProductCountStatistics
+  请求方法: GET
+  请求参数: {}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"200","requestId":"f16c5c8d-415a-4818-b4c7-07c85a89a74e","message":"处理成功","timestamp":"1779174047697","data":{"awaitingShipmentCount":"1885","pendingAfterSalesCount":"222","onSaleProductCount":null,"outOfStockProductCount":null}}
+  响应时间: 81.10 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+【8】列表统计
+  用例编号: 009
+  测试模块: 首页模块
+  接口URL: /home/getListStatistics
+  请求方法: GET
+  请求参数: {'salesTimeRange': 0, 'sortType': 0, 'type': 0}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"200","requestId":"244f0706-8b6c-4031-963b-deff98f79337","message":"处理成功","timestamp":"1779174047965","data":{"amountOfDepositRefund":"1","postSaleComplaint":"3"}}
+  响应时间: 267.56 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+【9】平台数据
+  用例编号: 010
+  测试模块: 首页模块
+  接口URL: /home/getPlatformData
+  请求方法: GET
+  请求参数: {}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"200","requestId":"70b0f7fd-45ef-4771-8664-1bf900513404","message":"处理成功","timestamp":"1779174048048","data":{"pendingSettleCommission":"1188371","settledCommission":"488403","totalPoints":492323,"ingots":88712}}
+  响应时间: 76.13 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+【10】最近销售(7天)
+  用例编号: 011
+  测试模块: 首页模块
+  接口URL: /home/recentSales
+  请求方法: GET
+  请求参数: {'days': 7}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"200","requestId":"62d2b64b-353f-49f8-85a4-bb84ffdf04d7","message":"处理成功","timestamp":"1779174048119","data":{"timeLabels":["05-13","05-14","05-15","05-16","05-17","05-18","05-19"],"salesAmountData":[2429.57,869.83,0,0,0,0,0],"salesVolumeData":["10","19","0","0","0","0","0"]}}
+  响应时间: 61.01 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+【11】订单统计(全范围)
+  用例编号: 012
+  测试模块: 首页模块
+  接口URL: /home/orderStatistics/byRange
+  请求方法: GET
+  请求参数: {'dateRange': 'all'}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"QUERY_ERROR","requestId":"72ec2e76-eae0-4163-8678-e051049587b9","message":"获取统计数据失败: Cannot invoke \"java.time.LocalDate.format(java.time.format.DateTimeFormatter)\" because \"startDate\" is null","timestamp":"1779174048176"}
+  响应时间: 57.07 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+【12】首页统计POST(type=0)
+  用例编号: 013
+  测试模块: 首页模块
+  接口URL: /home/homePageStatistics
+  请求方法: POST
+  请求参数: {'salesTimeRange': 0, 'sortType': 0, 'type': 0}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"500","requestId":"cbb5e29f-d672-474d-9d58-4d4d3c1d9b01","message":"服务错误","timestamp":"1779174048221","data":"[503] during [POST] to [http://core-product/core/product/homePageStatistics] [ProductInfoFeignClient#getRankingData(PlatformHomepageReqDTO)]: [Load balancer does not contain an instance for the service core-product]"}
+  响应时间: 39.19 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+【13】首页统计POST(type=1)
+  用例编号: 014
+  测试模块: 首页模块
+  接口URL: /home/homePageStatistics
+  请求方法: POST
+  请求参数: {'salesTimeRange': 0, 'sortType': 0, 'type': 1}
+  预期状态码: 200
+  实际状态码: 200
+  实际响应: {"code":"500","requestId":"2ca32123-99a4-4dee-8aa9-a6b8bc25a69d","message":"服务错误","timestamp":"1779174058264","data":"timeout executing POST http://core-order/order/supplier/statistic/getSupplierStatisticsTopRanking"}
+  响应时间: 10034.23 ms
+  测试时间: 2026-05-19 15:00:46
+  测试结果: PASS
+
+================================================================================

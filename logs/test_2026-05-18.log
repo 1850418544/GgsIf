@@ -1,0 +1,832 @@
+2026-05-18 20:35:22 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:35:22 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:35:22 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:35:22 | INFO     | utils.excel_reporter:save_report:99 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:35:22 | INFO     | utils.txt_reporter:generate_report:67 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:63 - ================================================================================
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:64 - 报告生成完成!
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:65 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:66 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:67 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:35:22 | INFO     | conftest:pytest_sessionfinish:68 - ================================================================================
+2026-05-18 20:35:53 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:35:53 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:35:53 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_get_request
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_post_request
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_put_request
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_delete_request
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_status_code_200
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_status_code_404
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_delay_response
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_custom_headers
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_ip_response
+2026-05-18 20:35:53 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_user_agent
+2026-05-18 20:35:53 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/get
+2026-05-18 20:35:53 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:35:55 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /get (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:35:55 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_get_request
+2026-05-18 20:35:55 | INFO     | utils.http_client:request:20 - 发送请求: POST https://httpbin.org/post
+2026-05-18 20:35:55 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'testuser', 'password': 'testpass123'}
+2026-05-18 20:35:56 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /post (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:35:56 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_post_request
+2026-05-18 20:35:56 | INFO     | utils.http_client:request:20 - 发送请求: PUT https://httpbin.org/put
+2026-05-18 20:35:56 | DEBUG    | utils.http_client:request:21 - 请求参数: {'title': 'Test Title', 'body': 'Test Body'}
+2026-05-18 20:35:57 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /put (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:35:57 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_put_request
+2026-05-18 20:35:57 | INFO     | utils.http_client:request:20 - 发送请求: DELETE https://httpbin.org/delete
+2026-05-18 20:35:57 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:35:58 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /delete (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:35:58 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_delete_request
+2026-05-18 20:35:58 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/status/200
+2026-05-18 20:35:58 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:35:59 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:35:59 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_status_code_200
+2026-05-18 20:35:59 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/status/404
+2026-05-18 20:35:59 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:01 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/404 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:36:01 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_status_code_404
+2026-05-18 20:36:01 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/delay/2
+2026-05-18 20:36:01 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:02 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /delay/2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:36:02 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_delay_response
+2026-05-18 20:36:02 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/headers
+2026-05-18 20:36:02 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:03 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /headers (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:36:03 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_custom_headers
+2026-05-18 20:36:03 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/ip
+2026-05-18 20:36:03 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:05 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:36:05 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_ip_response
+2026-05-18 20:36:05 | INFO     | utils.http_client:request:20 - 发送请求: GET https://httpbin.org/user-agent
+2026-05-18 20:36:05 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:06 | ERROR    | utils.http_client:request:59 - 请求失败: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /user-agent (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))
+2026-05-18 20:36:06 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_user_agent
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:36:06 | INFO     | utils.excel_reporter:save_report:99 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:36:06 | INFO     | utils.txt_reporter:generate_report:67 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:63 - ================================================================================
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:64 - 报告生成完成!
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:65 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:66 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:67 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:36:06 | INFO     | conftest:pytest_sessionfinish:68 - ================================================================================
+2026-05-18 20:36:26 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:36:26 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:36:26 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_get_request
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_post_request
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_put_request
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_delete_request
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_status_code_200
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_status_code_404
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_delay_response
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_custom_headers
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_ip_response
+2026-05-18 20:36:26 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_user_agent
+2026-05-18 20:36:26 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/get
+2026-05-18 20:36:26 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:27 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 1571.47ms
+2026-05-18 20:36:27 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07cb-4703bf1c472e07261889a8a8"
+  }, 
+  "origin": "183.6.68.81", 
+  "url": "http://httpbin.org/get"
+}
+
+2026-05-18 20:36:28 | ERROR    | conftest:pytest_runtest_makereport:48 - ✗ 测试失败: test_get_request
+2026-05-18 20:36:28 | INFO     | utils.http_client:request:20 - 发送请求: POST http://httpbin.org/post
+2026-05-18 20:36:28 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'testuser', 'password': 'testpass123'}
+2026-05-18 20:36:29 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 1392.99ms
+2026-05-18 20:36:29 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "{\"username\": \"testuser\", \"password\": \"testpass123\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "51", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07cc-0ec97f6a21b9f8d162ee429d"
+  }, 
+  "json": {
+    "password": "testpass123", 
+   
+2026-05-18 20:36:29 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_post_request
+2026-05-18 20:36:29 | INFO     | utils.http_client:request:20 - 发送请求: PUT http://httpbin.org/put
+2026-05-18 20:36:29 | DEBUG    | utils.http_client:request:21 - 请求参数: {'title': 'Test Title', 'body': 'Test Body'}
+2026-05-18 20:36:30 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 938.21ms
+2026-05-18 20:36:30 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "{\"title\": \"Test Title\", \"body\": \"Test Body\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "44", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07ce-377540e40bf3d1df294ce918"
+  }, 
+  "json": {
+    "body": "Test Body", 
+    "title": "Te
+2026-05-18 20:36:30 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_put_request
+2026-05-18 20:36:30 | INFO     | utils.http_client:request:20 - 发送请求: DELETE http://httpbin.org/delete
+2026-05-18 20:36:30 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:30 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 519.31ms
+2026-05-18 20:36:30 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "0", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07cf-67fa579f0e77c76660aa2f5f"
+  }, 
+  "json": null, 
+  "origin": "183.6.68.81", 
+  "url": "http://httpbin.org/delete"
+}
+
+2026-05-18 20:36:30 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_delete_request
+2026-05-18 20:36:30 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/status/200
+2026-05-18 20:36:30 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:31 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 828.96ms
+2026-05-18 20:36:31 | DEBUG    | utils.http_client:request:37 - 响应内容: 
+2026-05-18 20:36:31 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_status_code_200
+2026-05-18 20:36:31 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/status/404
+2026-05-18 20:36:31 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:32 | INFO     | utils.http_client:request:36 - 请求完成: 404 - 302.66ms
+2026-05-18 20:36:32 | DEBUG    | utils.http_client:request:37 - 响应内容: 
+2026-05-18 20:36:32 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_status_code_404
+2026-05-18 20:36:32 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/delay/2
+2026-05-18 20:36:32 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:35 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 3046.07ms
+2026-05-18 20:36:35 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07d0-426b1430279d7701340e011b"
+  }, 
+  "origin": "183.6.68.81", 
+  "url": "http://httpbin.org/delay/2"
+}
+
+2026-05-18 20:36:35 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_delay_response
+2026-05-18 20:36:35 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/headers
+2026-05-18 20:36:35 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:36 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 946.69ms
+2026-05-18 20:36:36 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07d3-5d57283d693fa11c1e56bc9c", 
+    "X-Custom-Header": "TestValue"
+  }
+}
+
+2026-05-18 20:36:36 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_custom_headers
+2026-05-18 20:36:36 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/ip
+2026-05-18 20:36:36 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:36 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 214.00ms
+2026-05-18 20:36:36 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "origin": "183.6.68.81"
+}
+
+2026-05-18 20:36:36 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_ip_response
+2026-05-18 20:36:36 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/user-agent
+2026-05-18 20:36:36 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:36 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 312.61ms
+2026-05-18 20:36:36 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+}
+
+2026-05-18 20:36:36 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_user_agent
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:36:36 | INFO     | utils.excel_reporter:save_report:99 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:36:36 | INFO     | utils.txt_reporter:generate_report:67 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:63 - ================================================================================
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:64 - 报告生成完成!
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:65 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:66 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:67 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:36:36 | INFO     | conftest:pytest_sessionfinish:68 - ================================================================================
+2026-05-18 20:36:55 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:36:55 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:36:55 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_get_request
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_post_request
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_put_request
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_delete_request
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_status_code_200
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_status_code_404
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_delay_response
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_custom_headers
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_ip_response
+2026-05-18 20:36:56 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_httpbin.py::TestHttpBinAPI::test_user_agent
+2026-05-18 20:36:56 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/get
+2026-05-18 20:36:56 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:36:57 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 1445.13ms
+2026-05-18 20:36:57 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07ea-04e1876b779772fd70284c70"
+  }, 
+  "origin": "183.6.68.81", 
+  "url": "http://httpbin.org/get"
+}
+
+2026-05-18 20:36:57 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_get_request
+2026-05-18 20:36:57 | INFO     | utils.http_client:request:20 - 发送请求: POST http://httpbin.org/post
+2026-05-18 20:36:57 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'testuser', 'password': 'testpass123'}
+2026-05-18 20:36:58 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 882.51ms
+2026-05-18 20:36:58 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "{\"username\": \"testuser\", \"password\": \"testpass123\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "51", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07ea-054ccbe91cca86d634681d98"
+  }, 
+  "json": {
+    "password": "testpass123", 
+   
+2026-05-18 20:36:58 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_post_request
+2026-05-18 20:36:58 | INFO     | utils.http_client:request:20 - 发送请求: PUT http://httpbin.org/put
+2026-05-18 20:36:58 | DEBUG    | utils.http_client:request:21 - 请求参数: {'title': 'Test Title', 'body': 'Test Body'}
+2026-05-18 20:36:59 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 1091.82ms
+2026-05-18 20:36:59 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "{\"title\": \"Test Title\", \"body\": \"Test Body\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "44", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07eb-4899ec1a54cd31597cf3ee4d"
+  }, 
+  "json": {
+    "body": "Test Body", 
+    "title": "Te
+2026-05-18 20:36:59 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_put_request
+2026-05-18 20:36:59 | INFO     | utils.http_client:request:20 - 发送请求: DELETE http://httpbin.org/delete
+2026-05-18 20:36:59 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:00 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 806.88ms
+2026-05-18 20:37:00 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "0", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07ec-32277ede4fd66033000ad0a3"
+  }, 
+  "json": null, 
+  "origin": "183.6.68.81", 
+  "url": "http://httpbin.org/delete"
+}
+
+2026-05-18 20:37:00 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_delete_request
+2026-05-18 20:37:00 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/status/200
+2026-05-18 20:37:00 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:00 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 215.79ms
+2026-05-18 20:37:00 | DEBUG    | utils.http_client:request:37 - 响应内容: 
+2026-05-18 20:37:00 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_status_code_200
+2026-05-18 20:37:00 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/status/404
+2026-05-18 20:37:00 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:01 | INFO     | utils.http_client:request:36 - 请求完成: 404 - 733.23ms
+2026-05-18 20:37:01 | DEBUG    | utils.http_client:request:37 - 响应内容: 
+2026-05-18 20:37:01 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_status_code_404
+2026-05-18 20:37:01 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/delay/2
+2026-05-18 20:37:01 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:06 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 4735.02ms
+2026-05-18 20:37:06 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07ee-0f71d2377212f7d975c4a566"
+  }, 
+  "origin": "183.6.68.81", 
+  "url": "http://httpbin.org/delay/2"
+}
+
+2026-05-18 20:37:06 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_delay_response
+2026-05-18 20:37:06 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/headers
+2026-05-18 20:37:06 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:07 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 1510.87ms
+2026-05-18 20:37:07 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6a0b07f2-22ce630451dded5c4d949543", 
+    "X-Custom-Header": "TestValue"
+  }
+}
+
+2026-05-18 20:37:07 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_custom_headers
+2026-05-18 20:37:07 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/ip
+2026-05-18 20:37:07 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:10 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 2387.01ms
+2026-05-18 20:37:10 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "origin": "183.6.68.81"
+}
+
+2026-05-18 20:37:10 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_ip_response
+2026-05-18 20:37:10 | INFO     | utils.http_client:request:20 - 发送请求: GET http://httpbin.org/user-agent
+2026-05-18 20:37:10 | DEBUG    | utils.http_client:request:21 - 请求参数: None
+2026-05-18 20:37:10 | INFO     | utils.http_client:request:36 - 请求完成: 200 - 544.20ms
+2026-05-18 20:37:10 | DEBUG    | utils.http_client:request:37 - 响应内容: {
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+}
+
+2026-05-18 20:37:10 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_user_agent
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:37:10 | INFO     | utils.excel_reporter:save_report:99 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:37:10 | INFO     | utils.txt_reporter:generate_report:67 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:63 - ================================================================================
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:64 - 报告生成完成!
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:65 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:66 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:67 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:37:10 | INFO     | conftest:pytest_sessionfinish:68 - ================================================================================
+2026-05-18 20:47:51 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:47:51 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:47:51 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:47:52 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 20:47:52 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 20:47:52 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 20:47:52 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 20:47:52 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 158.70ms
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"200","requestId":"01375492-5504-4c00-b16b-0f7f44fe8849","message":"处理成功","timestamp":"1779108472731","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1ZGM0MmVmNDY1NjY0NDViOGQ4MzZhOWVjYmZiYmQ3MiIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMDg0NzIsImV4cCI6MTc4MTcwMDQ3Mn0.ElrIHOVWtgslvnHoH2Q8M3aexz3XS2dGFA3L2KUM22Q","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 20:47:52 | INFO     | testcases.test_auth_login:test_login_success:24 - 登录响应: {"code":"200","requestId":"01375492-5504-4c00-b16b-0f7f44fe8849","message":"处理成功","timestamp":"1779108472731","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1ZGM0MmVmNDY1NjY0NDViOGQ4MzZhOWVjYmZiYmQ3MiIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMDg0NzIsImV4cCI6MTc4MTcwMDQ3Mn0.ElrIHOVWtgslvnHoH2Q8M3aexz3XS2dGFA3L2KUM22Q","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 20:47:52 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_success
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 31.80ms
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"2682a586-2a04-4e94-a1a6-e205acce12f5","message":"账号不存在或密码错误！","timestamp":"1779108472825"}
+2026-05-18 20:47:52 | INFO     | testcases.test_auth_login:test_login_wrong_password:41 - 错误密码响应状态码: 200
+2026-05-18 20:47:52 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_wrong_password
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 28.81ms
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"a780a5ae-f9b1-4d85-9b4a-712370d188d6","message":"账户不存在！","timestamp":"1779108472861"}
+2026-05-18 20:47:52 | INFO     | testcases.test_auth_login:test_login_empty_username:54 - 空用户名响应状态码: 200
+2026-05-18 20:47:52 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_empty_username
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 37.90ms
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"76d77e99-521f-4bb7-aace-afcf3d210ca8","message":"账号不存在或密码错误！","timestamp":"1779108472898"}
+2026-05-18 20:47:52 | INFO     | testcases.test_auth_login:test_login_empty_password:67 - 空密码响应状态码: 200
+2026-05-18 20:47:52 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_empty_password
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan'}
+2026-05-18 20:47:52 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 43.65ms
+2026-05-18 20:47:52 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"500","requestId":"74f97745-d6c8-428c-8f11-07427d14de17","message":"服务错误","timestamp":"1779108472985","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T12:47:52.977+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 20:47:52 | INFO     | testcases.test_auth_login:test_login_missing_params:79 - 缺少参数响应状态码: 200
+2026-05-18 20:47:52 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_missing_params
+2026-05-18 20:47:52 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:47:52 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:47:52 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:47:52 | ERROR    | utils.excel_reporter:save_report:101 - 生成Excel报告失败: [Errno 13] Permission denied: 'C:\\Users\\DELL\\Documents\\trae_projects\\GgsIf\\reports\\test_report.xlsx'
+2026-05-18 20:47:52 | ERROR    | conftest:pytest_sessionfinish:71 - 生成报告时出错: [Errno 13] Permission denied: 'C:\\Users\\DELL\\Documents\\trae_projects\\GgsIf\\reports\\test_report.xlsx'
+2026-05-18 20:47:52 | ERROR    | conftest:pytest_sessionfinish:73 - Traceback (most recent call last):
+  File "C:\Users\DELL\Documents\trae_projects\GgsIf\conftest.py", line 59, in pytest_sessionfinish
+    excel_reporter.save_report(test_results)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DELL\Documents\trae_projects\GgsIf\utils\excel_reporter.py", line 98, in save_report
+    self.wb.save(Config.EXCEL_REPORT)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "D:\Enviroments\Python\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\DELL\\Documents\\trae_projects\\GgsIf\\reports\\test_report.xlsx'
+
+2026-05-18 20:48:21 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:48:21 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:48:21 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:48:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 20:48:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 20:48:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 20:48:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 20:48:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 170.98ms
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"200","requestId":"ea1b3afe-ced7-4b70-a430-47e95735c946","message":"处理成功","timestamp":"1779108503342","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiJjY2ZmNjQyYmJiZDE0ZGZjODIwZmI1MWNkZDRlMTVlZSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMDg1MDMsImV4cCI6MTc4MTcwMDUwM30.EHQX0pG8SQ4j-AHDpTz4av6uZ0Jj0_yRz4090GdSaX4","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 20:48:22 | INFO     | testcases.test_auth_login:test_login_success:24 - 登录响应: {"code":"200","requestId":"ea1b3afe-ced7-4b70-a430-47e95735c946","message":"处理成功","timestamp":"1779108503342","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiJjY2ZmNjQyYmJiZDE0ZGZjODIwZmI1MWNkZDRlMTVlZSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMDg1MDMsImV4cCI6MTc4MTcwMDUwM30.EHQX0pG8SQ4j-AHDpTz4av6uZ0Jj0_yRz4090GdSaX4","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 20:48:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_success
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 31.63ms
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"003f66a3-148d-47e5-af54-23044881f96a","message":"账号不存在或密码错误！","timestamp":"1779108503446"}
+2026-05-18 20:48:22 | INFO     | testcases.test_auth_login:test_login_wrong_password:41 - 错误密码响应状态码: 200
+2026-05-18 20:48:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_wrong_password
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 30.95ms
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"60bf28e1-0471-4260-82fe-52e9debfdab8","message":"账户不存在！","timestamp":"1779108503481"}
+2026-05-18 20:48:22 | INFO     | testcases.test_auth_login:test_login_empty_username:54 - 空用户名响应状态码: 200
+2026-05-18 20:48:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_empty_username
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 32.93ms
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"7c336ecf-0c3f-4a3c-90da-6328cadc062f","message":"账号不存在或密码错误！","timestamp":"1779108503520"}
+2026-05-18 20:48:22 | INFO     | testcases.test_auth_login:test_login_empty_password:67 - 空密码响应状态码: 200
+2026-05-18 20:48:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_empty_password
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan'}
+2026-05-18 20:48:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 47.69ms
+2026-05-18 20:48:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"500","requestId":"6b0398d6-2937-4625-a09b-4cd9978bf76b","message":"服务错误","timestamp":"1779108503578","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T12:48:23.574+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 20:48:22 | INFO     | testcases.test_auth_login:test_login_missing_params:79 - 缺少参数响应状态码: 200
+2026-05-18 20:48:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_missing_params
+2026-05-18 20:48:22 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:48:22 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:48:22 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:48:22 | ERROR    | utils.excel_reporter:save_report:101 - 生成Excel报告失败: [Errno 13] Permission denied: 'C:\\Users\\DELL\\Documents\\trae_projects\\GgsIf\\reports\\test_report.xlsx'
+2026-05-18 20:48:22 | ERROR    | conftest:pytest_sessionfinish:71 - 生成报告时出错: [Errno 13] Permission denied: 'C:\\Users\\DELL\\Documents\\trae_projects\\GgsIf\\reports\\test_report.xlsx'
+2026-05-18 20:48:22 | ERROR    | conftest:pytest_sessionfinish:73 - Traceback (most recent call last):
+  File "C:\Users\DELL\Documents\trae_projects\GgsIf\conftest.py", line 59, in pytest_sessionfinish
+    excel_reporter.save_report(test_results)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DELL\Documents\trae_projects\GgsIf\utils\excel_reporter.py", line 98, in save_report
+    self.wb.save(Config.EXCEL_REPORT)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "D:\Enviroments\Python\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\DELL\\Documents\\trae_projects\\GgsIf\\reports\\test_report.xlsx'
+
+2026-05-18 20:49:22 | INFO     | conftest:pytest_configure:11 - ================================================================================
+2026-05-18 20:49:22 | INFO     | conftest:pytest_configure:12 - 开始接口自动化测试
+2026-05-18 20:49:22 | INFO     | conftest:pytest_configure:13 - ================================================================================
+2026-05-18 20:49:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 20:49:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 20:49:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 20:49:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 20:49:22 | DEBUG    | conftest:pytest_collection_modifyitems:19 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 181.79ms
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"200","requestId":"efe30a5b-9eb1-4ca5-a4cf-2c9666b1a0c4","message":"处理成功","timestamp":"1779108563199","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1Y2I4ZDk2YTA1NjQ0YTMyYjUwMWRhOGExZjMyNTc3MSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMDg1NjMsImV4cCI6MTc4MTcwMDU2M30.bFaQzJeqJA908m3bjvk1iSckWynf-jw48D1AUN8V9TU","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 20:49:22 | INFO     | testcases.test_auth_login:test_login_success:24 - 登录响应: {"code":"200","requestId":"efe30a5b-9eb1-4ca5-a4cf-2c9666b1a0c4","message":"处理成功","timestamp":"1779108563199","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1Y2I4ZDk2YTA1NjQ0YTMyYjUwMWRhOGExZjMyNTc3MSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMDg1NjMsImV4cCI6MTc4MTcwMDU2M30.bFaQzJeqJA908m3bjvk1iSckWynf-jw48D1AUN8V9TU","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 20:49:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_success
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 33.15ms
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"ce72ea98-b41e-4976-8ff7-b7ade09075a4","message":"账号不存在或密码错误！","timestamp":"1779108563312"}
+2026-05-18 20:49:22 | INFO     | testcases.test_auth_login:test_login_wrong_password:41 - 错误密码响应状态码: 200
+2026-05-18 20:49:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_wrong_password
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 30.01ms
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"5196648e-ff3a-4e7f-a5de-632df52c0910","message":"账户不存在！","timestamp":"1779108563354"}
+2026-05-18 20:49:22 | INFO     | testcases.test_auth_login:test_login_empty_username:54 - 空用户名响应状态码: 200
+2026-05-18 20:49:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_empty_username
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 27.25ms
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"2002","requestId":"7daf4cca-cda0-4986-aa3a-2769090582fa","message":"账号不存在或密码错误！","timestamp":"1779108563392"}
+2026-05-18 20:49:22 | INFO     | testcases.test_auth_login:test_login_empty_password:67 - 空密码响应状态码: 200
+2026-05-18 20:49:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_empty_password
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:20 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:21 - 请求参数: {'username': 'fan'}
+2026-05-18 20:49:22 | INFO     | utils.http_client:request:37 - 请求完成: 200 - 34.75ms
+2026-05-18 20:49:22 | DEBUG    | utils.http_client:request:38 - 响应内容: {"code":"500","requestId":"03aaa277-f1df-412c-8075-9e2f2d8176eb","message":"服务错误","timestamp":"1779108563432","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T12:49:23.429+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 20:49:22 | INFO     | testcases.test_auth_login:test_login_missing_params:79 - 缺少参数响应状态码: 200
+2026-05-18 20:49:22 | INFO     | conftest:pytest_runtest_makereport:46 - ✓ 测试通过: test_login_missing_params
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:51 - ================================================================================
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:52 - 测试执行完成，正在生成报告...
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:53 - ================================================================================
+2026-05-18 20:49:22 | INFO     | utils.excel_reporter:save_report:101 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report_20260518_204922.xlsx
+2026-05-18 20:49:22 | INFO     | utils.txt_reporter:generate_report:67 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:63 - ================================================================================
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:64 - 报告生成完成!
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:65 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:66 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report.xlsx
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:67 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 20:49:22 | INFO     | conftest:pytest_sessionfinish:68 - ================================================================================
+2026-05-18 21:16:56 | INFO     | conftest:pytest_configure:23 - ================================================================================
+2026-05-18 21:16:56 | INFO     | conftest:pytest_configure:24 - 开始接口自动化测试
+2026-05-18 21:16:56 | INFO     | conftest:pytest_configure:25 - ================================================================================
+2026-05-18 21:16:56 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 21:16:56 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 21:16:56 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 21:16:56 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 21:16:56 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 21:16:56 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:16:56 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 669.36ms
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"200","requestId":"8af8a511-bce0-4c41-9259-36274c8daed0","message":"处理成功","timestamp":"1779110217189","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1NjYzZGE4MWM5NTg0NWRmYThmOWJmYWQ0NDIwYjEwOSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTAyMTcsImV4cCI6MTc4MTcwMjIxN30.0mA9MIKfwDxYBPmZSH89EyQQLbgLLKlOzzAGCoq__Uw","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:16:57 | INFO     | testcases.test_auth_login:test_login_success:38 - 登录成功响应: {"code":"200","requestId":"8af8a511-bce0-4c41-9259-36274c8daed0","message":"处理成功","timestamp":"1779110217189","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1NjYzZGE4MWM5NTg0NWRmYThmOWJmYWQ0NDIwYjEwOSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTAyMTcsImV4cCI6MTc4MTcwMjIxN30.0mA9MIKfwDxYBPmZSH89EyQQLbgLLKlOzzAGCoq__Uw","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:16:57 | INFO     | conftest:pytest_runtest_makereport:72 - ✓ 测试通过: test_login_success
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 33.90ms
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"a44ab920-a020-49c9-93d8-b3324f0f1f0f","message":"账号不存在或密码错误！","timestamp":"1779110217759"}
+2026-05-18 21:16:57 | INFO     | testcases.test_auth_login:test_login_wrong_password:62 - 错误密码响应状态码: 200
+2026-05-18 21:16:57 | INFO     | conftest:pytest_runtest_makereport:72 - ✓ 测试通过: test_login_wrong_password
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 27.20ms
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"a5b51a47-3915-4e00-95b4-ffc4b46bcc02","message":"账户不存在！","timestamp":"1779110217796"}
+2026-05-18 21:16:57 | INFO     | testcases.test_auth_login:test_login_empty_username:80 - 空用户名响应状态码: 200
+2026-05-18 21:16:57 | INFO     | conftest:pytest_runtest_makereport:72 - ✓ 测试通过: test_login_empty_username
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 696.94ms
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"034c379c-4aeb-4f57-b87f-f17ec37f6b5b","message":"账号不存在或密码错误！","timestamp":"1779110217836"}
+2026-05-18 21:16:57 | INFO     | testcases.test_auth_login:test_login_empty_password:98 - 空密码响应状态码: 200
+2026-05-18 21:16:57 | INFO     | conftest:pytest_runtest_makereport:72 - ✓ 测试通过: test_login_empty_password
+2026-05-18 21:16:57 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:16:57 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan'}
+2026-05-18 21:16:58 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 258.04ms
+2026-05-18 21:16:58 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"500","requestId":"3cc4be0a-3251-4b82-a472-3b4f3c37eafd","message":"服务错误","timestamp":"1779110218540","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T13:16:58.538+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 21:16:58 | INFO     | testcases.test_auth_login:test_login_missing_params:116 - 缺少参数响应状态码: 200
+2026-05-18 21:16:58 | INFO     | conftest:pytest_runtest_makereport:72 - ✓ 测试通过: test_login_missing_params
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:81 - ================================================================================
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:82 - 测试执行完成，正在生成报告...
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:83 - ================================================================================
+2026-05-18 21:16:58 | INFO     | utils.excel_reporter:save_report:186 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report_20260518_211658.xlsx
+2026-05-18 21:16:58 | INFO     | utils.txt_reporter:generate_report:102 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:96 - ================================================================================
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:97 - 报告生成完成!
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:98 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:99 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:100 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:16:58 | INFO     | conftest:pytest_sessionfinish:101 - ================================================================================
+2026-05-18 21:30:28 | INFO     | conftest:pytest_configure:23 - ================================================================================
+2026-05-18 21:30:28 | INFO     | conftest:pytest_configure:24 - 开始接口自动化测试
+2026-05-18 21:30:28 | INFO     | conftest:pytest_configure:25 - ================================================================================
+2026-05-18 21:30:29 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 21:30:29 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 21:30:29 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 21:30:29 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 21:30:29 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 231.18ms
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"200","requestId":"9f12406b-08d5-4642-89c9-317f8d0b0688","message":"处理成功","timestamp":"1779111029956","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1OWE5MzQxMmM1ZDU0ZTAwYmY4MGY3YWY2MjM4YzhiZSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTEwMjksImV4cCI6MTc4MTcwMzAyOX0.DJxkNodihboVhyX0KA6D8gKTnbAp33EC50QaoisfI00","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:30:29 | INFO     | testcases.test_auth_login:test_login_success:41 - 登录成功响应: {"code":"200","requestId":"9f12406b-08d5-4642-89c9-317f8d0b0688","message":"处理成功","timestamp":"1779111029956","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI1OWE5MzQxMmM1ZDU0ZTAwYmY4MGY3YWY2MjM4YzhiZSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTEwMjksImV4cCI6MTc4MTcwMzAyOX0.DJxkNodihboVhyX0KA6D8gKTnbAp33EC50QaoisfI00","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:30:29 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 登录成功
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 35.12ms
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"66c79373-7e0a-48f7-8ee9-bba42474f9ef","message":"账号不存在或密码错误！","timestamp":"1779111030064"}
+2026-05-18 21:30:29 | INFO     | testcases.test_auth_login:test_login_wrong_password:79 - 错误密码响应状态码: 200
+2026-05-18 21:30:29 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 错误密码登录
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 30.63ms
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"07844d84-9b88-44bd-b6ed-733e2c958f21","message":"账户不存在！","timestamp":"1779111030111"}
+2026-05-18 21:30:29 | INFO     | testcases.test_auth_login:test_login_empty_username:111 - 空用户名响应状态码: 200
+2026-05-18 21:30:29 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空用户名登录
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 29.66ms
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"c7bada90-aaf4-43ff-9117-3319192a97ec","message":"账号不存在或密码错误！","timestamp":"1779111030155"}
+2026-05-18 21:30:29 | INFO     | testcases.test_auth_login:test_login_empty_password:143 - 空密码响应状态码: 200
+2026-05-18 21:30:29 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空密码登录
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan'}
+2026-05-18 21:30:29 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 34.80ms
+2026-05-18 21:30:29 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"500","requestId":"55fe2271-18b4-42e5-92c4-07a6c576a2b6","message":"服务错误","timestamp":"1779111030211","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T13:30:30.208+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 21:30:29 | INFO     | testcases.test_auth_login:test_login_missing_params:175 - 缺少参数响应状态码: 200
+2026-05-18 21:30:29 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 缺少参数登录
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:95 - ================================================================================
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:96 - 测试执行完成，正在生成报告...
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:97 - ================================================================================
+2026-05-18 21:30:29 | INFO     | utils.excel_reporter:save_report:186 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report_20260518_213029.xlsx
+2026-05-18 21:30:29 | INFO     | utils.txt_reporter:generate_report:102 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:110 - ================================================================================
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:111 - 报告生成完成!
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:112 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:113 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:114 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:30:29 | INFO     | conftest:pytest_sessionfinish:115 - ================================================================================
+2026-05-18 21:31:27 | INFO     | conftest:pytest_configure:23 - ================================================================================
+2026-05-18 21:31:27 | INFO     | conftest:pytest_configure:24 - 开始接口自动化测试
+2026-05-18 21:31:27 | INFO     | conftest:pytest_configure:25 - ================================================================================
+2026-05-18 21:31:27 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 21:31:27 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 21:31:27 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 21:31:27 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 21:31:27 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 195.21ms
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"200","requestId":"15749b1a-2c0d-4ab3-85b5-8c12fe194f3a","message":"处理成功","timestamp":"1779111088015","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiIzZjVmN2JlZTc0MTk0MDQzOWI5N2QyNTNlODg5NDQ4YSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTEwODgsImV4cCI6MTc4MTcwMzA4OH0.b009ORAm_M4O7yio4bGGcJmeU4FsHdMgLm8Rvz1p23g","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:31:27 | INFO     | testcases.test_auth_login:test_login_success:41 - 登录成功响应: {"code":"200","requestId":"15749b1a-2c0d-4ab3-85b5-8c12fe194f3a","message":"处理成功","timestamp":"1779111088015","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiIzZjVmN2JlZTc0MTk0MDQzOWI5N2QyNTNlODg5NDQ4YSIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTEwODgsImV4cCI6MTc4MTcwMzA4OH0.b009ORAm_M4O7yio4bGGcJmeU4FsHdMgLm8Rvz1p23g","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:31:27 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 登录成功
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 44.40ms
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"dae4faa6-0930-4412-bc38-dbc2c649e2cc","message":"账号不存在或密码错误！","timestamp":"1779111088155"}
+2026-05-18 21:31:27 | INFO     | testcases.test_auth_login:test_login_wrong_password:79 - 错误密码响应状态码: 200
+2026-05-18 21:31:27 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 错误密码登录
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 30.48ms
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"b960a325-f5b4-4e99-a37a-ef7c8ce9da52","message":"账户不存在！","timestamp":"1779111088198"}
+2026-05-18 21:31:27 | INFO     | testcases.test_auth_login:test_login_empty_username:111 - 空用户名响应状态码: 200
+2026-05-18 21:31:27 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空用户名登录
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 28.39ms
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"e9ef08b2-3dc0-4107-8167-579ab378c70e","message":"账号不存在或密码错误！","timestamp":"1779111088232"}
+2026-05-18 21:31:27 | INFO     | testcases.test_auth_login:test_login_empty_password:143 - 空密码响应状态码: 200
+2026-05-18 21:31:27 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空密码登录
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan'}
+2026-05-18 21:31:27 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 37.12ms
+2026-05-18 21:31:27 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"500","requestId":"c8f7eac4-ff00-4496-807a-66994fcbb0c7","message":"服务错误","timestamp":"1779111088272","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T13:31:28.270+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 21:31:27 | INFO     | testcases.test_auth_login:test_login_missing_params:175 - 缺少参数响应状态码: 200
+2026-05-18 21:31:27 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 缺少参数登录
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:95 - ================================================================================
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:96 - 测试执行完成，正在生成报告...
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:97 - ================================================================================
+2026-05-18 21:31:27 | INFO     | utils.excel_reporter:save_report:186 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report_20260518_213127.xlsx
+2026-05-18 21:31:27 | INFO     | utils.txt_reporter:generate_report:107 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:110 - ================================================================================
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:111 - 报告生成完成!
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:112 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:113 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:114 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:31:27 | INFO     | conftest:pytest_sessionfinish:115 - ================================================================================
+2026-05-18 21:37:54 | INFO     | conftest:pytest_configure:23 - ================================================================================
+2026-05-18 21:37:54 | INFO     | conftest:pytest_configure:24 - 开始接口自动化测试
+2026-05-18 21:37:54 | INFO     | conftest:pytest_configure:25 - ================================================================================
+2026-05-18 21:37:54 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 21:37:54 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 21:37:54 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 21:37:54 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 21:37:54 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 21:37:54 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:37:54 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 21:37:54 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 252.35ms
+2026-05-18 21:37:54 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"200","requestId":"ad4fa3d8-343e-4da0-b022-5322ade42810","message":"处理成功","timestamp":"1779111475460","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiJhNDczOTFmZjI1ODQ0YmE2OGU2NGYzMTQ2N2ExM2EwMCIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTE0NzUsImV4cCI6MTc4MTcwMzQ3NX0.IEPpXJ1219elNhxna3liEH8Jq2CXqqA55lP16Z2kxKs","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:37:54 | INFO     | testcases.test_auth_login:test_login_success:41 - 登录成功响应: {"code":"200","requestId":"ad4fa3d8-343e-4da0-b022-5322ade42810","message":"处理成功","timestamp":"1779111475460","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiJhNDczOTFmZjI1ODQ0YmE2OGU2NGYzMTQ2N2ExM2EwMCIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTE0NzUsImV4cCI6MTc4MTcwMzQ3NX0.IEPpXJ1219elNhxna3liEH8Jq2CXqqA55lP16Z2kxKs","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:37:54 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 登录成功
+2026-05-18 21:37:54 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:37:54 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 21:37:54 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 38.32ms
+2026-05-18 21:37:54 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"254157d2-64ae-4d19-9c0a-4c99adcfebfa","message":"账号不存在或密码错误！","timestamp":"1779111475620"}
+2026-05-18 21:37:54 | INFO     | testcases.test_auth_login:test_login_wrong_password:85 - 错误密码响应状态码: 200
+2026-05-18 21:37:54 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 错误密码登录
+2026-05-18 21:37:54 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:37:54 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 21:37:55 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 29.43ms
+2026-05-18 21:37:55 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"c1d2522b-9917-49e8-8091-3021839801f3","message":"账户不存在！","timestamp":"1779111475661"}
+2026-05-18 21:37:55 | INFO     | testcases.test_auth_login:test_login_empty_username:123 - 空用户名响应状态码: 200
+2026-05-18 21:37:55 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空用户名登录
+2026-05-18 21:37:55 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:37:55 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 21:37:55 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 35.11ms
+2026-05-18 21:37:55 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"51a6b323-06f3-4146-9fd5-1295503b0617","message":"账号不存在或密码错误！","timestamp":"1779111475699"}
+2026-05-18 21:37:55 | INFO     | testcases.test_auth_login:test_login_empty_password:161 - 空密码响应状态码: 200
+2026-05-18 21:37:55 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空密码登录
+2026-05-18 21:37:55 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:37:55 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan'}
+2026-05-18 21:37:55 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 41.16ms
+2026-05-18 21:37:55 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"500","requestId":"6edad729-8865-4f29-ac22-1eef264fe222","message":"服务错误","timestamp":"1779111475742","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T13:37:55.740+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 21:37:55 | INFO     | testcases.test_auth_login:test_login_missing_params:199 - 缺少参数响应状态码: 200
+2026-05-18 21:37:55 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 缺少参数登录
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:95 - ================================================================================
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:96 - 测试执行完成，正在生成报告...
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:97 - ================================================================================
+2026-05-18 21:37:55 | INFO     | utils.excel_reporter:save_report:189 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report_20260518_213755.xlsx
+2026-05-18 21:37:55 | INFO     | utils.txt_reporter:generate_report:109 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:110 - ================================================================================
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:111 - 报告生成完成!
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:112 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:113 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:114 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:37:55 | INFO     | conftest:pytest_sessionfinish:115 - ================================================================================
+2026-05-18 21:43:32 | INFO     | conftest:pytest_configure:23 - ================================================================================
+2026-05-18 21:43:32 | INFO     | conftest:pytest_configure:24 - 开始接口自动化测试
+2026-05-18 21:43:32 | INFO     | conftest:pytest_configure:25 - ================================================================================
+2026-05-18 21:43:32 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_success
+2026-05-18 21:43:32 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_wrong_password
+2026-05-18 21:43:32 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_username
+2026-05-18 21:43:32 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_empty_password
+2026-05-18 21:43:32 | DEBUG    | conftest:pytest_collection_modifyitems:36 - 收集测试用例: testcases/test_auth_login.py::TestAuthLogin::test_login_missing_params
+2026-05-18 21:43:32 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:43:32 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'fan123'}
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 159.22ms
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"200","requestId":"3d9214b4-9e3b-4954-a292-26071e8dba7e","message":"处理成功","timestamp":"1779111813671","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI2MDVjZWUzNzI1ZTk0OTI5YjRiYjgzN2JlN2Y4MDJmYiIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTE4MTMsImV4cCI6MTc4MTcwMzgxM30.7ocwg4-qTSBhyg09hfMlWC5EahT5Y3KySoL28kN8lI8","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:43:33 | INFO     | testcases.test_auth_login:test_login_success:45 - 登录成功响应: {"code":"200","requestId":"3d9214b4-9e3b-4954-a292-26071e8dba7e","message":"处理成功","timestamp":"1779111813671","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiI2MDVjZWUzNzI1ZTk0OTI5YjRiYjgzN2JlN2Y4MDJmYiIsImtleSI6IjE5ODI2NTE0NTA2MjI2Mjc4NDIiLCJpYXQiOjE3NzkxMTE4MTMsImV4cCI6MTc4MTcwMzgxM30.7ocwg4-qTSBhyg09hfMlWC5EahT5Y3KySoL28kN8lI8","sysUser":{"id":"1982651450622627842","createTime":"2025-10-27T03:31:56.000+00:00","updateTime":"2026-05-15T12:16:34.000+00:00","createBy":"197
+2026-05-18 21:43:33 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 登录成功
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 37.38ms
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"ae59b2ef-3f6d-4d11-a516-edd702bdaa9a","message":"账号不存在或密码错误！","timestamp":"1779111813791"}
+2026-05-18 21:43:33 | INFO     | testcases.test_auth_login:test_login_wrong_password:88 - 错误密码响应状态码: 200
+2026-05-18 21:43:33 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 错误密码登录
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': '', 'password': 'fan123'}
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 29.32ms
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"219282bf-c574-4ae2-8756-4107cc89ff7a","message":"账户不存在！","timestamp":"1779111813825"}
+2026-05-18 21:43:33 | INFO     | testcases.test_auth_login:test_login_empty_username:125 - 空用户名响应状态码: 200
+2026-05-18 21:43:33 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空用户名登录
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan', 'password': ''}
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 29.60ms
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"2002","requestId":"4e0d595a-a190-41d2-aaae-c820c8b64874","message":"账号不存在或密码错误！","timestamp":"1779111813859"}
+2026-05-18 21:43:33 | INFO     | testcases.test_auth_login:test_login_empty_password:162 - 空密码响应状态码: 200
+2026-05-18 21:43:33 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 空密码登录
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:73 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:74 - 请求参数: {'username': 'fan'}
+2026-05-18 21:43:33 | INFO     | utils.http_client:request:94 - 请求完成: 200 - 41.68ms
+2026-05-18 21:43:33 | DEBUG    | utils.http_client:request:95 - 响应内容: {"code":"500","requestId":"1224f540-c359-4b0e-8173-4c9147900e5c","message":"服务错误","timestamp":"1779111813908","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserClient#authLogin(SysUserReqDTO)]: [{\"timestamp\":\"2026-05-18T13:43:33.907+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/core/boss/sysuser/authLogin\"}]"}
+2026-05-18 21:43:33 | INFO     | testcases.test_auth_login:test_login_missing_params:199 - 缺少参数响应状态码: 200
+2026-05-18 21:43:33 | INFO     | conftest:pytest_runtest_makereport:86 - ✓ 测试通过: 缺少参数登录
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:95 - ================================================================================
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:96 - 测试执行完成，正在生成报告...
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:97 - ================================================================================
+2026-05-18 21:43:33 | INFO     | utils.excel_reporter:save_report:187 - Excel报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_report_20260518_214333.xlsx
+2026-05-18 21:43:33 | INFO     | utils.txt_reporter:generate_report:112 - TXT报告已生成: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:110 - ================================================================================
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:111 - 报告生成完成!
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:112 - Allure报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\allure-results
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:113 - Excel报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:114 - TXT报告: C:\Users\DELL\Documents\trae_projects\GgsIf\reports\test_summary.txt
+2026-05-18 21:43:33 | INFO     | conftest:pytest_sessionfinish:115 - ================================================================================
