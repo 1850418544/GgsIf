@@ -1,6 +1,9 @@
 DEBUG    urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): pehss.sfrtlce.cn:443
 DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/service/boss/sysuser/authLogin HTTP/1.1" 200 None
-DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/service/boss/sysuser/authLogin HTTP/1.1" 200 None
-DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/service/boss/sysuser/authLogin HTTP/1.1" 200 None
-DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/service/boss/sysuser/authLogin HTTP/1.1" 200 None
-DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/service/boss/sysuser/authLogin HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "GET /service-boss/home/statistics HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "GET /service-boss/home/orderProductCountStatistics HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "GET /service-boss/home/getListStatistics?salesTimeRange=0&sortType=0&type=0 HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "GET /service-boss/home/getPlatformData HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "GET /service-boss/home/recentSales?days=7 HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/home/homePageStatistics HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/home/homePageStatistics HTTP/1.1" 200 None
