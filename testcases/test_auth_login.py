@@ -24,7 +24,7 @@ class TestAuthLogin:
         """测试使用正确凭证登录
         
         测试场景:使用正确的用户名和密码登录系统
-        预期结果:登录成功,返回200状态码
+        预期结果:登录成功,返回200状态码和登录成功信息的JSON响应
         """
         # 记录测试开始时间
         start_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -42,6 +42,8 @@ class TestAuthLogin:
             assert response["status_code"] == 200, f"预期状态码200,实际{response['status_code']}"
         
         # 记录响应日志（便于调试）
+        # 安全获取字典中的值，避免因键不存在导致 KeyError 异常
+        # 对上一步获取的字符串进行切片，仅保留前 500 个字符
         logger.info(f"登录成功响应: {response.get('response_text', '')[:500]}")
         
         # 保存测试详情到全局变量
@@ -63,7 +65,7 @@ class TestAuthLogin:
         # 如果有响应数据,验证数据结构
         if "response" in response and response["response"]:
             with allure.step("验证响应数据结构"):
-                assert isinstance(response["response"], dict), "响应应是JSON对象"
+                assert isinstance(response["response"], dict), "响应是JSON对象"
     
     @allure.feature('用户认证')
     @allure.story('登录接口测试-错误密码')

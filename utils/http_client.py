@@ -29,6 +29,9 @@ class HttpClient:
         self.base_url = base_url or Config.BASE_URL
         
         # 创建会话对象，可保持连接复用
+        # 创建一个requests会话对象，用于保持连接复用
+        # 会话对象可以：1. 复用TCP连接（提升性能） 2. 保持cookies 3. 共享请求头配置
+        # 用法：self.session.get() / self.session.post() 等方式发送请求
         self.session = requests.Session()
         # 设置默认请求头
         self.session.headers.update(Config.HEADERS)

@@ -1,2 +1,0 @@
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): pehss.sfrtlce.cn:443
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://pehss.sfrtlce.cn:443 "POST /service-boss/service/boss/sysuser/authLogin HTTP/1.1" 200 None

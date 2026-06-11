@@ -11,10 +11,8 @@ class WeChatWorkNotifier:
     
     def __init__(self, webhook_url):
         """初始化企业微信通知器
-        
         参数：
             webhook_url (str): 企业微信机器人的Webhook地址
-        
         使用示例：
             notifier = WeChatWorkNotifier("https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx")
         """
@@ -22,15 +20,12 @@ class WeChatWorkNotifier:
     
     def send_text(self, content):
         """发送文本消息
-        
         参数：
             content (str): 消息内容
-        
         返回：
-            dict: 接口响应
-        
+            dict: 接口响应数据
         使用示例：
-            notifier.send_text("测试完成！通过5个接口，失败0个")
+            notifier.send_text("测试完成! 通过5个接口,失败0个")
         """
         data = {
             "msgtype": "text",
@@ -46,7 +41,7 @@ class WeChatWorkNotifier:
                 data=json.dumps(data),
                 verify=False  # 跳过SSL证书验证（解决企业微信证书问题）
             )
-            response.raise_for_status()
+            response.raise_for_status()  # 检查HTTP状态码是否为2xx
             result = response.json()
             
             if result.get("errcode") == 0:
@@ -61,13 +56,10 @@ class WeChatWorkNotifier:
     
     def send_markdown(self, content):
         """发送Markdown消息
-        
         参数：
             content (str): Markdown格式的消息内容
-        
         返回：
             dict: 接口响应
-        
         使用示例：
             notifier.send_markdown("## 测试报告\n\n- 通过: 5\n- 失败: 0")
         """
@@ -194,7 +186,7 @@ class WeChatWorkNotifier:
 - 失败接口: {failed}
 """
         
-        # 如果有报错接口，列出详情
+        # 如果有报错接口,列出详情
         if error_interfaces:
             markdown_content += "\n### ❌ 报错接口详情\n"
             for idx, result in enumerate(error_interfaces, 1):
@@ -209,8 +201,8 @@ class WeChatWorkNotifier:
         # 发送Markdown消息（始终发送）
         self.send_markdown(markdown_content)
         
-        # 发送TXT文件（可选，失败不影响主流程）
+        # 发送TXT文件（可选,失败不影响主流程）
         if txt_report_path:
             file_result = self.send_file(txt_report_path)
             if file_result.get("errcode") != 0:
-                logger.warning(f"TXT文件发送失败，已跳过")
+                logger.warning(f"TXT文件发送失败,已跳过")

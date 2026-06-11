@@ -1,6 +1,0 @@
-2026-05-19 14:49:58 | INFO     | utils.http_client:request:94 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/service/boss/sysuser/authLogin
-2026-05-19 14:49:59 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 166.35ms
-2026-05-19 14:49:59 | INFO     | testcases.test_home_page:access_token:35 - 获取到token: eyJhbGciOiJIUzI1NiJ9...
-2026-05-19 14:49:59 | INFO     | utils.http_client:request:94 - 发送请求: GET https://pehss.sfrtlce.cn/service-boss/home/statistics
-2026-05-19 14:49:59 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 169.72ms
-2026-05-19 14:49:59 | INFO     | conftest:pytest_runtest_makereport:87 - ✓ 测试通过: 首页统计接口

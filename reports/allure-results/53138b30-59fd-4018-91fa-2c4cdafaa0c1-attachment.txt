@@ -1,3 +1,0 @@
-2026-05-19 14:49:59 | INFO     | utils.http_client:request:94 - 发送请求: POST https://pehss.sfrtlce.cn/service-boss/home/homePageStatistics
-2026-05-19 14:49:59 | INFO     | utils.http_client:request:115 - 请求完成: 200 - 120.78ms
-2026-05-19 14:49:59 | INFO     | conftest:pytest_runtest_makereport:87 - ✓ 测试通过: 首页统计POST(type=0)
