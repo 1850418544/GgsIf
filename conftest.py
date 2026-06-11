@@ -152,7 +152,7 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
     
-    # 只处理测试执行阶段的结果（call阶段）
+    # 只处理测试执行阶段的结果(call阶段)
     if report.when == "call":
         # 尝试从测试模块获取详细的测试结果
         test_info = None
@@ -197,7 +197,7 @@ def pytest_runtest_makereport(item, call):
 def pytest_sessionfinish(session, exitstatus):
     """pytest会话结束钩子 - 在所有测试完成后调用
     
-    生成测试报告（Excel、TXT、Allure）
+    生成测试报告(Excel、TXT、Allure)
     发送企业微信通知
     """
     logger.info("=" * 80)
@@ -237,10 +237,10 @@ def pytest_sessionfinish(session, exitstatus):
             logger.info("正在发送邮件通知...")
             from utils.email_notifier import EmailNotifier
             
-            # 收集附件（Excel报告和TXT报告）
+            # 收集附件(Excel报告和TXT报告)
             attachments = []
             
-            # 添加Excel报告（查找最新生成的报告）
+            # 添加Excel报告(查找最新生成的报告)
             excel_reports = list(Config.REPORT_DIR.glob("test_report_*.xlsx"))
             if excel_reports:
                 latest_excel = max(excel_reports, key=os.path.getctime)

@@ -19,7 +19,7 @@ class ExcelReporter:
         """
         # 创建新的工作簿
         self.wb = Workbook()
-        # 获取活动工作表（默认第一个）
+        # 获取活动工作表(默认第一个)
         self.ws = self.wb.active
         # 设置工作表名称
         self.ws.title = "测试报告"
@@ -67,7 +67,7 @@ class ExcelReporter:
             cell.alignment = header_alignment
             cell.border = thin_border
         
-        # 设置列宽（根据内容调整）
+        # 设置列宽(根据内容调整)
         for col in range(1, len(headers) + 1):
             self.ws.column_dimensions[self.ws.cell(row=1, column=col).column_letter].width = 15
     
@@ -85,7 +85,7 @@ class ExcelReporter:
                 - expected_status: 预期状态码
                 - actual_status: 实际状态码
                 - actual_response: 实际响应
-                - result: 测试结果（PASS/FAIL）
+                - result: 测试结果(PASS/FAIL)
                 - response_time: 响应时间
                 - error_msg: 错误信息
                 - test_time: 测试时间
@@ -134,7 +134,7 @@ class ExcelReporter:
             cell.border = thin_border
             cell.alignment = Alignment(vertical="center", wrap_text=True)  # 自动换行
             
-            # 测试结果列特殊处理（绿色通过，红色失败）
+            # 测试结果列特殊处理(绿色通过，红色失败)
             if col_num == 10:
                 if value == "PASS":
                     cell.font = Font(color="00B050")  # 绿色

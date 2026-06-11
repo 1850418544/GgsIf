@@ -6,7 +6,7 @@
 import os
 from pathlib import Path
 
-# 尝试加载 .env 文件（可选，如果没有安装 python-dotenv 或文件不存在则忽略）
+# 尝试加载 .env 文件(可选，如果没有安装 python-dotenv 或文件不存在则忽略)
 try:
     from dotenv import load_dotenv
     load_dotenv()  # 从项目根目录加载 .env 文件
@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).parent.parent
 
 def _env_bool(key: str, default: bool) -> bool:
     """从环境变量读取布尔值
-    支持的值: true/false/yes/no/1/0（不区分大小写）
+    支持的值: true/false/yes/no/1/0(不区分大小写)
     """
     value = os.getenv(key, "").strip().lower()
     if not value:
@@ -42,7 +42,7 @@ class Config:
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
 
-    # 测试账号（从环境变量读取，方便在不同环境中配置不同账号）
+    # 测试账号(从环境变量读取，方便在不同环境中配置不同账号)
     TEST_USERNAME = os.getenv("TEST_USERNAME", "fan")
     TEST_PASSWORD = os.getenv("TEST_PASSWORD", "fan123")
 
@@ -52,7 +52,7 @@ class Config:
     REPORT_DIR = BASE_DIR / "reports"
     # Allure 报告数据目录
     ALLURE_DIR = REPORT_DIR / "allure-results"
-    # Excel 报告路径（实际使用时会添加时间戳）
+    # Excel 报告路径(实际使用时会添加时间戳)
     EXCEL_REPORT = REPORT_DIR / "test_report.xlsx"
     # TXT 报告路径
     TXT_REPORT = REPORT_DIR / "test_summary.txt"
@@ -72,7 +72,7 @@ class Config:
     SMTP_USER = os.getenv("SMTP_USER", "")           # 发件人邮箱
     SMTP_PASS = os.getenv("SMTP_PASS", "")           # 邮箱密码或授权码
     SMTP_FROM_NAME = os.getenv("SMTP_FROM_NAME", "API自动化测试")  # 发件人显示名称
-    # 收件人邮箱（支持多个，用逗号分隔）
+    # 收件人邮箱(支持多个，用逗号分隔)
     EMAIL_TO = os.getenv("EMAIL_TO", "")
 
     # 是否生成 Allure 报告

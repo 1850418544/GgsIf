@@ -20,8 +20,8 @@ class EmailNotifier:
         """初始化邮件通知器
         
         参数：
-            smtp_host (str): SMTP 服务器地址（如 smtp.qq.com, smtp.163.com）
-            smtp_port (int): SMTP 端口（SSL通常是465，TLS通常是587）
+            smtp_host (str): SMTP 服务器地址(如 smtp.qq.com, smtp.163.com)
+            smtp_port (int): SMTP 端口(SSL通常是465，TLS通常是587)
             smtp_user (str): 发件人邮箱账号
             smtp_pass (str): 发件人邮箱密码或授权码
             smtp_from_name (str): 发件人显示名称
@@ -47,7 +47,7 @@ class EmailNotifier:
         参数：
             to_emails (list): 收件人邮箱列表，如 ["a@example.com", "b@example.com"]
             subject (str): 邮件主题
-            content (str): 邮件内容（支持HTML格式）
+            content (str): 邮件内容(支持HTML格式)
             attachments (list, 可选): 附件文件路径列表，如 ["reports/test_report.xlsx"]
         
         返回：
@@ -204,7 +204,7 @@ class EmailNotifier:
 </html>
 """
         
-        # 构建主题（包含通过率）
+        # 构建主题(包含通过率)
         subject = f"【接口自动化测试】{'✅' if failed == 0 else '⚠️'} {passed}/{total} 通过 ({pass_rate:.0f}%)"
         
         return self.send_email(
@@ -215,7 +215,7 @@ class EmailNotifier:
         )
     
     def _get_to_emails(self):
-        """获取收件人列表（从配置或环境变量读取）"""
+        """获取收件人列表(从配置或环境变量读取)"""
         # 优先从环境变量读取
         to_emails_str = os.getenv("EMAIL_TO", "")
         if to_emails_str:

@@ -22,9 +22,9 @@ class TxtReporter:
         
         报告内容包括：
             - 测试时间
-            - 测试汇总（总用例数、通过数、失败数、通过率）
-            - 失败接口详情（如果有失败）
-            - 详细测试结果列表（包含用例编号、模块、名称、URL、参数、状态码、响应、响应时间、测试时间、结果）
+            - 测试汇总(总用例数、通过数、失败数、通过率)
+            - 失败接口详情(如果有失败)
+            - 详细测试结果列表(包含用例编号、模块、名称、URL、参数、状态码、响应、响应时间、测试时间、结果)
         """
         # 确保目录存在
         Config.ensure_dirs()
@@ -57,7 +57,7 @@ class TxtReporter:
         report_lines.append(f"通过率: {pass_rate:.2f}%")
         report_lines.append("")
         
-        # 失败接口详情（如果有失败）
+        # 失败接口详情(如果有失败)
         if failed > 0:
             report_lines.append("-" * 80)
             report_lines.append("失败接口详情")

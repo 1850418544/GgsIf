@@ -39,7 +39,7 @@ class WeChatWorkNotifier:
                 self.webhook_url,
                 headers={"Content-Type": "application/json"},
                 data=json.dumps(data),
-                verify=False  # 跳过SSL证书验证（解决企业微信证书问题）
+                verify=False  # 跳过SSL证书验证(解决企业微信证书问题)
             )
             response.raise_for_status()  # 检查HTTP状态码是否为2xx
             result = response.json()
@@ -75,7 +75,7 @@ class WeChatWorkNotifier:
                 self.webhook_url,
                 headers={"Content-Type": "application/json"},
                 data=json.dumps(data),
-                verify=False  # 跳过SSL证书验证（解决企业微信证书问题）
+                verify=False  # 跳过SSL证书验证(解决企业微信证书问题)
             )
             response.raise_for_status()
             result = response.json()
@@ -105,7 +105,7 @@ class WeChatWorkNotifier:
         try:
             import os
             
-            # 检查文件是否存在且大小不超过20MB（企业微信限制）
+            # 检查文件是否存在且大小不超过20MB(企业微信限制)
             if not os.path.exists(file_path):
                 logger.error(f"文件不存在: {file_path}")
                 return {"errcode": -1, "errmsg": "文件不存在"}
@@ -115,7 +115,7 @@ class WeChatWorkNotifier:
                 logger.error(f"文件大小超过20MB限制: {file_size} bytes")
                 return {"errcode": -1, "errmsg": "文件大小超过20MB限制"}
             
-            # 1. 先上传文件获取media_id（需要添加type参数）
+            # 1. 先上传文件获取media_id(需要添加type参数)
             upload_url = self.webhook_url.replace("/send?", "/upload_media?type=file")
             
             with open(file_path, "rb") as f:
@@ -142,7 +142,7 @@ class WeChatWorkNotifier:
                 self.webhook_url,
                 headers={"Content-Type": "application/json"},
                 data=json.dumps(data),
-                verify=False  # 跳过SSL证书验证（解决企业微信证书问题）
+                verify=False  # 跳过SSL证书验证(解决企业微信证书问题)
             )
             response.raise_for_status()
             result = response.json()
@@ -172,7 +172,7 @@ class WeChatWorkNotifier:
         passed = sum(1 for r in test_results if r.get("result") == "PASS")
         failed = total - passed
         
-        # 筛选报错的接口（状态码为500或其他错误状态码）
+        # 筛选报错的接口(状态码为500或其他错误状态码)
         error_interfaces = [r for r in test_results if r.get("actual_status") in [500, 502, 503, 404, 403, 401]]
         
         # 构建简洁的Markdown报告
@@ -198,10 +198,10 @@ class WeChatWorkNotifier:
         
         markdown_content += "\n*报告由自动化测试框架自动发送*"
         
-        # 发送Markdown消息（始终发送）
+        # 发送Markdown消息(始终发送)
         self.send_markdown(markdown_content)
         
-        # 发送TXT文件（可选,失败不影响主流程）
+        # 发送TXT文件(可选,失败不影响主流程)
         if txt_report_path:
             file_result = self.send_file(txt_report_path)
             if file_result.get("errcode") != 0:

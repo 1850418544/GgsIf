@@ -30,12 +30,12 @@ class HttpClient:
         
         # 创建会话对象，可保持连接复用
         # 创建一个requests会话对象，用于保持连接复用
-        # 会话对象可以：1. 复用TCP连接（提升性能） 2. 保持cookies 3. 共享请求头配置
+        # 会话对象可以：1. 复用TCP连接(提升性能) 2. 保持cookies 3. 共享请求头配置
         # 用法：self.session.get() / self.session.post() 等方式发送请求
         self.session = requests.Session()
         # 设置默认请求头
         self.session.headers.update(Config.HEADERS)
-        # 禁用SSL证书验证（测试环境使用，生产环境建议启用）
+        # 禁用SSL证书验证(测试环境使用，生产环境建议启用)
         self.session.verify = False
         
         # 存储token
@@ -60,7 +60,7 @@ class HttpClient:
             del self.session.headers["Authorization"]
     
     def request(self, method, endpoint, params=None, json=None, headers=None, timeout=None):
-        """发送HTTP请求（通用方法）
+        """发送HTTP请求(通用方法)
         
         参数：
             method (str): HTTP方法，如GET、POST、PUT、DELETE
@@ -73,11 +73,11 @@ class HttpClient:
         返回：
             dict: 包含以下键的字典
                 - status_code: HTTP状态码
-                - response: 响应JSON数据（如果响应是JSON）
+                - response: 响应JSON数据(如果响应是JSON)
                 - response_text: 响应文本
-                - elapsed_time: 响应时间（毫秒）
+                - elapsed_time: 响应时间(毫秒)
                 - headers: 响应头
-                - error: 错误信息（如果有）
+                - error: 错误信息(如果有)
         
         使用示例：
             response = client.request("POST", "/api/login", json={"username": "test"})
@@ -97,7 +97,7 @@ class HttpClient:
             logger.info(f"发送请求: {method} {url}")
             logger.debug(f"请求参数: {json or params}")
             
-            # 更新请求头（如果有自定义头）
+            # 更新请求头(如果有自定义头)
             if headers:
                 self.session.headers.update(headers)
             
@@ -111,7 +111,7 @@ class HttpClient:
                 verify=False  # 禁用SSL验证
             )
             
-            # 计算响应时间（毫秒）
+            # 计算响应时间(毫秒)
             elapsed_time = (time.time() - start_time) * 1000
             
             # 记录响应日志
@@ -156,7 +156,7 @@ class HttpClient:
         参数：
             endpoint (str): API端点路径
             params (dict, 可选): URL查询参数
-            **kwargs: 其他可选参数（headers, timeout等）
+            **kwargs: 其他可选参数(headers, timeout等)
         
         使用示例：
             response = client.get("/api/users", params={"page": 1, "size": 10})
@@ -169,7 +169,7 @@ class HttpClient:
         参数：
             endpoint (str): API端点路径
             json (dict, 可选): 请求体JSON数据
-            **kwargs: 其他可选参数（headers, timeout等）
+            **kwargs: 其他可选参数(headers, timeout等)
         
         使用示例：
             response = client.post("/api/login", json={"username": "fan", "password": "fan123"})
@@ -182,7 +182,7 @@ class HttpClient:
         参数：
             endpoint (str): API端点路径
             json (dict, 可选): 请求体JSON数据
-            **kwargs: 其他可选参数（headers, timeout等）
+            **kwargs: 其他可选参数(headers, timeout等)
         
         使用示例：
             response = client.put("/api/users/1", json={"name": "newname"})
@@ -194,7 +194,7 @@ class HttpClient:
         
         参数：
             endpoint (str): API端点路径
-            **kwargs: 其他可选参数（headers, timeout等）
+            **kwargs: 其他可选参数(headers, timeout等)
         
         使用示例：
             response = client.delete("/api/users/1")
@@ -207,7 +207,7 @@ class HttpClient:
         参数：
             endpoint (str): API端点路径
             json (dict, 可选): 请求体JSON数据
-            **kwargs: 其他可选参数（headers, timeout等）
+            **kwargs: 其他可选参数(headers, timeout等)
         
         使用示例：
             response = client.patch("/api/users/1", json={"name": "updated"})

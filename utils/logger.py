@@ -27,7 +27,7 @@ def setup_logger():
         logger.error("错误信息，操作失败")
         logger.critical("严重错误，系统可能无法运行")
     """
-    # 设置Windows终端编码为UTF-8（通过环境变量）
+    # 设置Windows终端编码为UTF-8(通过环境变量)
     import os
     os.environ['PYTHONIOENCODING'] = 'utf-8'
     
@@ -41,7 +41,7 @@ def setup_logger():
     # 确保日志目录存在
     Config.ensure_dirs()
     
-    # 移除默认的日志处理器（避免重复输出）
+    # 移除默认的日志处理器(避免重复输出)
     logger.remove()
     
     # 添加控制台输出处理器
@@ -51,7 +51,7 @@ def setup_logger():
         level="INFO"  # 控制台只显示INFO及以上级别
     )
     
-    # 添加文件输出处理器（使用open函数确保UTF-8编码）
+    # 添加文件输出处理器(使用open函数确保UTF-8编码)
     def log_file_sink(message):
         with open(str(Config.LOG_DIR / f"test_{message.record['time'].strftime('%Y-%m-%d')}.log"), 'a', encoding='utf-8') as f:
             f.write(message.record['message'] + '\n')

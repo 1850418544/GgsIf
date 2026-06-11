@@ -1,12 +1,12 @@
 """
 项目入口脚本
 可以直接运行: python main.py
-或者: python main.py -v （详细输出）
+或者: python main.py -v (详细输出)
 
 功能:
     1) 初始化日志和目录
     2) 调用 pytest 执行测试用例
-    3) 生成报告（Excel、TXT、Allure 数据）
+    3) 生成报告(Excel、TXT、Allure 数据)
     4) 可选发送企业微信通知
 """
 import sys
@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
-# 设置 UTF-8 编码（兼容 Windows）
+# 设置 UTF-8 编码(兼容 Windows)
 os.environ["PYTHONIOENCODING"] = "utf-8"
 
 from config.config import Config
@@ -46,16 +46,16 @@ def main():
     # 构造 pytest 参数：
     #   - 测试目录: testcases/
     #   - 详细输出: -v
-    #   - pytest.ini 中的 addopts 会自动生效（如 --alluredir）
+    #   - pytest.ini 中的 addopts 会自动生效(如 --alluredir)
     pytest_args = ["testcases/", "-v"]
 
-    # 将命令行中的额外参数透传给 pytest（例如: python main.py -k login）
+    # 将命令行中的额外参数透传给 pytest(例如: python main.py -k login)
     if len(sys.argv) > 1:
         pytest_args.extend(sys.argv[1:])
 
     logger.info(f"执行 pytest 命令参数: {pytest_args}")
 
-    # 运行 pytest（pytest 会自动读取 conftest.py 和 pytest.ini）
+    # 运行 pytest(pytest 会自动读取 conftest.py 和 pytest.ini)
     # conftest.py 中的 pytest_sessionfinish 钩子会负责生成报告和发通知
     exit_code = pytest.main(pytest_args)
 

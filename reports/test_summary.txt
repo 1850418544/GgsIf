@@ -2,13 +2,13 @@
                                    接口自动化测试报告                                    
 ================================================================================
 
-测试时间: 2026-06-11 14:54:12
+测试时间: 2026-06-11 16:29:18
 
 --------------------------------------------------------------------------------
 测试汇总
 --------------------------------------------------------------------------------
-总接口数: 13
-通过接口: 13
+总接口数: 5
+通过接口: 5
 失败接口: 0
 通过率: 100.00%
 
@@ -17,173 +17,69 @@
 详细测试结果
 ================================================================================
 
-【1】登录成功
+【1】test_login_success
   用例编号: 001
-  测试模块: 登录模块
+  测试模块: 
   接口URL: /service/boss/sysuser/authLogin
   请求方法: POST
-  请求参数: {'username': 'fan', 'password': 'fan123'}
+  请求参数: 
   预期状态码: 200
   实际状态码: 200
-  实际响应: {"code":"200","requestId":"09cdcf23-7293-44cb-8a92-742c87d27ed7","message":"处理成功","timestamp":"1781160852093","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJwYyIsInV1aWQiOiJiNjgwZTE0OTI1NjU0
-  响应时间: 167.21 ms
-  测试时间: 2026-06-11 14:54:11
+  实际响应: 
+  响应时间:  ms
+  测试时间: 2026-06-11 16:29:18
   测试结果: PASS
 
-【2】错误密码登录
+【2】test_login_wrong_password
   用例编号: 002
-  测试模块: 登录模块
+  测试模块: 
   接口URL: /service/boss/sysuser/authLogin
   请求方法: POST
-  请求参数: {'username': 'fan', 'password': 'wrongpassword'}
+  请求参数: 
   预期状态码: 200
   实际状态码: 200
-  实际响应: {"code":"2002","requestId":"ae0dc06b-90fd-42ef-972d-07a00274654a","message":"账号不存在或密码错误！","timestamp":"1781160852200"}
-  响应时间: 46.45 ms
-  测试时间: 2026-06-11 14:54:11
+  实际响应: 
+  响应时间:  ms
+  测试时间: 2026-06-11 16:29:18
   测试结果: PASS
 
-【3】空用户名登录
+【3】test_login_empty_username
   用例编号: 003
-  测试模块: 登录模块
+  测试模块: 
   接口URL: /service/boss/sysuser/authLogin
   请求方法: POST
-  请求参数: {'username': '', 'password': 'fan123'}
+  请求参数: 
   预期状态码: 200
   实际状态码: 200
-  实际响应: {"code":"2002","requestId":"ab7ef638-4e29-4560-a4be-31f89a08c82e","message":"账户不存在！","timestamp":"1781160852247"}
-  响应时间: 32.03 ms
-  测试时间: 2026-06-11 14:54:11
+  实际响应: 
+  响应时间:  ms
+  测试时间: 2026-06-11 16:29:18
   测试结果: PASS
 
-【4】空密码登录
+【4】test_login_empty_password
   用例编号: 004
-  测试模块: 登录模块
+  测试模块: 
   接口URL: /service/boss/sysuser/authLogin
   请求方法: POST
-  请求参数: {'username': 'fan', 'password': ''}
+  请求参数: 
   预期状态码: 200
   实际状态码: 200
-  实际响应: {"code":"2002","requestId":"d495a1d5-7fd2-414d-8c80-48ea832f5e5f","message":"账号不存在或密码错误！","timestamp":"1781160852284"}
-  响应时间: 34.21 ms
-  测试时间: 2026-06-11 14:54:11
+  实际响应: 
+  响应时间:  ms
+  测试时间: 2026-06-11 16:29:18
   测试结果: PASS
 
-【5】缺少参数登录
+【5】test_login_missing_params
   用例编号: 005
-  测试模块: 登录模块
+  测试模块: 
   接口URL: /service/boss/sysuser/authLogin
   请求方法: POST
-  请求参数: {'username': 'fan'}
+  请求参数: 
   预期状态码: 200
   实际状态码: 200
-  实际响应: {"code":"500","requestId":"a6d62b14-9373-4735-8af8-b46842404783","message":"服务错误","timestamp":"1781160852334","data":"[500 ] during [POST] to [http://core-boss/core/boss/sysuser/authLogin] [SysUserCli
-  响应时间: 40.84 ms
-  测试时间: 2026-06-11 14:54:11
-  测试结果: PASS
-
-【6】首页统计接口
-  用例编号: 007
-  测试模块: 首页模块
-  接口URL: /home/statistics
-  请求方法: GET
-  请求参数: {}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"a1172c95-4b5d-4cb2-803f-ddb45353e043","message":"处理成功","timestamp":"1781160852661","data":{"orderStatistics":null,"productSalesStatistics":{"todayStatistic":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260611},"yesterdayStatistic":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260610},"currentMonthStatistic":{"totalSalesVolume":"5","totalSalesAmount":"19978","beginDate":20260601,"endDate":20260611}},"memberTotalCount":"515","userTotalCount":"623","todayNewMembershipCount":"0","todaySalesStatistics":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260611},"yesterdaySalesStatistics":{"totalSalesVolume":"0","totalSalesAmount":"0","statDate":20260610},"currentMonthSalesStatistics":{"totalSalesVolume":"5","totalSalesAmount":"19978","beginDate":20260601,"endDate":20260611}}}
-  响应时间: 150.55 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【7】订单产品数量统计
-  用例编号: 008
-  测试模块: 首页模块
-  接口URL: /home/orderProductCountStatistics
-  请求方法: GET
-  请求参数: {}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"b2c1faa5-e751-415d-9b22-dc40c3a2474d","message":"处理成功","timestamp":"1781160852732","data":{"awaitingShipmentCount":"1846","pendingAfterSalesCount":"223","onSaleProductCount":"227","outOfStockProductCount":"15"}}
-  响应时间: 66.81 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【8】列表统计
-  用例编号: 009
-  测试模块: 首页模块
-  接口URL: /home/getListStatistics
-  请求方法: GET
-  请求参数: {'salesTimeRange': 0, 'sortType': 0, 'type': 0}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"5cdd851d-ae9f-4d59-a072-b721cb5fe7b3","message":"处理成功","timestamp":"1781160852784","data":{"amountOfDepositRefund":"1","postSaleComplaint":"1"}}
-  响应时间: 41.57 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【9】平台数据
-  用例编号: 010
-  测试模块: 首页模块
-  接口URL: /home/getPlatformData
-  请求方法: GET
-  请求参数: {}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"cb3d640f-9ecd-4627-8ffb-47e8de99923b","message":"处理成功","timestamp":"1781160852835","data":{"pendingSettleCommission":"2992819","settledCommission":"489703","totalPoints":489665,"ingots":75232}}
-  响应时间: 46.44 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【10】最近销售(7天)
-  用例编号: 011
-  测试模块: 首页模块
-  接口URL: /home/recentSales
-  请求方法: GET
-  请求参数: {'days': 7}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"7399f07b-0296-4382-8470-42c41300ed6e","message":"处理成功","timestamp":"1781160852876","data":{"timeLabels":["06-05","06-06","06-07","06-08","06-09","06-10","06-11"],"salesAmountData":[0,0,0,119.8,0,0,0],"salesVolumeData":["0","0","0","2","0","0","0"]}}
-  响应时间: 36.54 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【11】订单统计(全范围)
-  用例编号: 012
-  测试模块: 首页模块
-  接口URL: /home/orderStatistics/byRange
-  请求方法: GET
-  请求参数: {'dateRange': 'all'}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"QUERY_ERROR","requestId":"e63f6feb-7d3f-409a-bb0f-bbf0c6d483cc","message":"获取统计数据失败: Cannot invoke \"java.time.LocalDate.format(java.time.format.DateTimeFormatter)\" because \"startDate\" is null","timestamp":"1781160852924"}
-  响应时间: 43.93 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【12】首页统计POST(type=0)
-  用例编号: 013
-  测试模块: 首页模块
-  接口URL: /home/homePageStatistics
-  请求方法: POST
-  请求参数: {'salesTimeRange': 0, 'sortType': 0, 'type': 0}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"73399a0b-ca76-40ee-a16f-55567b777c9f","message":"处理成功","timestamp":"1781160853045","data":[{"id":"2017050992012955650","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20260128/20260128094631_Snipaste_2025_10_13_18_17_18.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3Dbc915859928772c947d47b652ddc1e308b8f5abd","title":"测试BBB","supplierName":"1212","sales":null,"salesAmount":"0"},{"id":"2048654772541722625","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20260427/20260427144423595_%E8%90%A8%E6%91%A9%E8%80%B6_7382be99.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D38c5c08e403de5021df995a5f67bde691a5daeeb","title":"哦也~~~","supplierName":"探九天智能科技股份有限公司","sales":null,"salesAmount":"0"},{"id":"2013147198535110657","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20260119/20260119151009_9c91210ddb4de35dde4eb900d1dd1497.gif?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D20cb91e397754650f95be2cdaa72fb04c0e6c321","title":"测试","supplierName":"hh全产业链供应链有限公司责任","sales":null,"salesAmount":"0"},{"id":"2030894368780587009","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20260309/20260309142938_%E7%9A%AE%E5%8D%A1%E4%B8%98.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D499cdd9c774555abc388c6c7a054170f96a3f625","title":"1","supplierName":"九天","sales":null,"salesAmount":"0"},{"id":"1978667905914507266","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20251016/20251016034053_46a3ffe8128bd5322ff9de9f4d54d6b0.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D5c7c78efb00082697364b3e58c891cab96efe695","title":"【冰箱除味盒】抑菌保鲜除臭三合一物理吸附 长效净味高达90天三腔款 甜橙/白桃","supplierName":"优品国际集团","sales":null,"salesAmount":"0"},{"id":"1995391209967063042","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20251201/20251201151835_4.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3Dacfdd2870504699cac6e99627bf6eef12855e485","title":"Nami 17promax 16+1TB 标准版 极光黑","supplierName":"1212","sales":null,"salesAmount":"0"},{"id":"1978672045764120578","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20251016/20251016035744_d12d43e551774bc08587272beae97e5c.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3Dd36394d7ba3b2df389db6129623592a1055e9ac1","title":"【通过远方15项检测天山卡森菊苣素牙膏】独特添加菊苣素多重植物精粹添加植物乳杆菌LN66 改善牙龈等口腔问题","supplierName":"优品国际集团","sales":null,"salesAmount":"0"},{"id":"2001264330624339970","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20251217/20251217201201_QSZRfMKpVgi61_V4W1FbMg.jpg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D8699d7ae905b6603257703dc5e2469f66d79e273","title":"首单专区商品首单专区商品首单专区商品","supplierName":"九天","sales":null,"salesAmount":"0"},{"id":"2016409384422739969","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20260128/20260128150852_wechat_2025_09_04_153959_788.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3Df621e06489601c43bd75a1d965591654eb630f25","title":"测试送礼分佣","supplierName":"1212","sales":null,"salesAmount":"0"},{"id":"2031270107145048066","imageUrl":"https://member-shop-dev-1313246400.cos.ap-guangzhou.myqcloud.com/img/20260310/20260310152409_icon_sp_2x.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzojiV47wc5JOWeo250zmQtBeVDnAKxVu%26q-sign-time%3D1781160853%3B1781164453%26q-key-time%3D1781160853%3B1781164453%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3Da8fcc2867d0f1c85aa1a6f49ad0537c6ed70c1af","title":"22","supplierName":"九天","sales":null,"salesAmount":"0"}]}
-  响应时间: 113.89 ms
-  测试时间: 2026-06-11 14:54:12
-  测试结果: PASS
-
-【13】首页统计POST(type=1)
-  用例编号: 014
-  测试模块: 首页模块
-  接口URL: /home/homePageStatistics
-  请求方法: POST
-  请求参数: {'salesTimeRange': 0, 'sortType': 0, 'type': 1}
-  预期状态码: 200
-  实际状态码: 200
-  实际响应: {"code":"200","requestId":"dd93e66d-bec1-46e5-a643-9e9c98c3bfd0","message":"处理成功","timestamp":"1781160853107","data":[{"id":"1966024082101108738","imageUrl":null,"title":null,"supplierName":"康泰生物科技集团","sales":"0","salesAmount":"0"},{"id":"1966024082101108739","imageUrl":null,"title":null,"supplierName":"绿源有机保健品","sales":"0","salesAmount":"0"},{"id":"1966024082101108742","imageUrl":null,"title":null,"supplierName":"环球健康进口商贸","sales":"0","salesAmount":"0"},{"id":"1966024082101108746","imageUrl":null,"title":null,"supplierName":"御品养生国际","sales":"0","salesAmount":"0"},{"id":"1966024082101108747","imageUrl":null,"title":null,"supplierName":"自然之力生物科技","sales":"0","salesAmount":"0"},{"id":"1966024082101108778","imageUrl":null,"title":null,"supplierName":"松下生物科技集团","sales":"0","salesAmount":"0"},{"id":"1970037994928742402","imageUrl":null,"title":null,"supplierName":"康泰生物科技集团","sales":"0","salesAmount":"0"},{"id":"1971856851637248002","imageUrl":null,"title":null,"supplierName":"金沙江畔","sales":"0","salesAmount":"0"},{"id":"1971857110836977665","imageUrl":null,"title":null,"supplierName":"测试","sales":"0","salesAmount":"0"},{"id":"1971865103930499074","imageUrl":null,"title":null,"supplierName":"农夫三拳【辣条】","sales":"0","salesAmount":"0"}]}
-  响应时间: 55.91 ms
-  测试时间: 2026-06-11 14:54:12
+  实际响应: 
+  响应时间:  ms
+  测试时间: 2026-06-11 16:29:18
   测试结果: PASS
 
 ================================================================================
